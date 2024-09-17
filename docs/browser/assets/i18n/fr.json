@@ -1,0 +1,16 @@
+{
+      "Movie Recommendation System": "Système de recommandation de films",
+      "Search":"Rechercher",
+      "Films":"Filmes",
+      "Login":"Se connecter",
+      "Sign Up":"S'inscrire",
+      "Search for movies...":"rechercher des films...",
+      "Movies": {
+    "Title": "Titre",
+    "ReleaseDate": "Date de sortie",
+    "VoteAverage": "Moyenne des votes",
+    "Overview": "Résumé"
+  },
+  "NOW_PLAYING": "En Cours",
+  "VIEW_DETAILS": "Voir les Détails"
+  }

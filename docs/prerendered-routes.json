@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/films",
+    "/films/popular",
+    "/films/top-rated",
+    "/home",
+    "/login",
+    "/movies",
+    "/recommendation",
+    "/signup"
+  ]
+}

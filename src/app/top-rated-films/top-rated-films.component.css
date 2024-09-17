@@ -1,0 +1,75 @@
+.films-list {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: space-between; /* Distribue les films pour occuper tout l'espace disponible */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .film-item {
+    flex: 1 1 calc(25% - 20px); /* Prend 25% de la largeur avec des marges */
+    margin: 10px; /* Réduire la marge pour plus d'espace */
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .film-item:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'élément au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Augmente l'ombre au survol pour un effet de mise en avant */
+}
+  
+  .film-item img {
+    max-width: 100%;
+    height: auto; /* S'assure que l'image est responsive */
+    border-radius: 5px;
+  }
+   .film-item:hover img {
+    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+}
+  
+  .film-item h3 {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .film-item:hover h3 {
+    color: #fff; /* Change la couleur du titre au survol */
+}
+
+  
+  .film-item p {
+    color: #fff;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: red;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    color: #fff;
+    margin: 0 10px;
+  }
+  

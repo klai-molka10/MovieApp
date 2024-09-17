@@ -1,0 +1,93 @@
+/* Container for the recommended movies */
+.recommended-movies-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for the recommended movies section */
+.recommended-movies-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* List of movies */
+.movies-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual movie item */
+.movie-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Movie poster */
+.movie-poster {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+/* Movie title and release date */
+.movie-item h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #555;
+}
+
+/* Genres list */
+.movie-item p {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0;
+}
+
+/* Star rating container */
+.star-rating {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Star icons */
+.star-rating i {
+  font-size: 20px;
+  color: #f4c542; /* Gold color for stars */
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* Star icons when not active */
+.star-rating i.far.fa-star {
+  color: #ddd; /* Light gray color for empty stars */
+}
+
+/* Rating submission button */
+.rate-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.rate-button:hover {
+  background-color: #0056b3;
+}
+
+.rate-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

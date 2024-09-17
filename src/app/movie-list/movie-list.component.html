@@ -1,0 +1,21 @@
+
+<div class="movie-list">
+  <ul>
+    <li *ngFor="let movie of movies" class="movie-item">
+      <img [src]="getMovieImage(movie)" alt="{{ movie.translatedTitle || movie.title }}" class="movie-image" (error)="onImageError($event)" />
+      <div class="movie-details">
+        <h2 class="movie-title">{{ movie.translatedTitle || movie.title }}</h2>
+        <p class="movie-release-date">{{ 'Movies.ReleaseDate' | translate }}: {{ movie.release_date | date }}</p>
+        <p class="movie-vote-average">{{ 'Movies.VoteAverage' | translate }}: {{ movie.vote_average }}</p>
+        <p class="movie-overview">{{ 'Movies.Overview' | translate }}: {{ movie.translatedDescription || movie.overview }}</p>
+        <button class="details-button" [routerLink]="['/movies', movie.id]" [queryParams]="{ userId: userId }">Details</button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="pagination">
+    <button (click)="goToPage(currentPage - 1)" [disabled]="currentPage === 1">Précédent</button>
+    <span>Page {{ currentPage }} sur {{ totalPages }}</span>
+    <button (click)="goToPage(currentPage + 1)" [disabled]="currentPage === totalPages">Suivant</button>
+  </div>
+</div>

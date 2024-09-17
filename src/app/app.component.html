@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+
+<!-- Conditionally display the top-rated movies list -->
+<div class="top-rated-container" *ngIf="showTopRatedMovies && topRatedMovies.length > 0">
+  <h2 class="top-rated-title">Top Rated Movies</h2>
+  <div class="movie-grid">
+    <div *ngFor="let movie of topRatedMovies" class="movie-card">
+      <img [src]="getMoviePosterUrl(movie.poster_path)" alt="{{ movie.title }}" class="movie-poster">
+      <div class="movie-info">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.overview | slice: 0:100 }}...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- This is where your page content (other routes) will be displayed -->
+<router-outlet></router-outlet>

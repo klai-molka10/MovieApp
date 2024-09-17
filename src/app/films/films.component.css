@@ -1,0 +1,28 @@
+.films-menu {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  
+  .films-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .film-item {
+    text-align: center;
+    width: 185px;
+  }
+  
+  .film-item img {
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .film-item h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+  }
+  

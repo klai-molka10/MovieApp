@@ -1,0 +1,17 @@
+
+{
+      "Movie Recommendation System": "Movie Recommendation System",
+      "Search":"Search",
+      "Films":"Films",
+      "Login":"Login",
+      "Sign Up":"Sign Up",
+      "Search for movies...":"Search for movies...",
+    "Movies": {
+    "Title": "Title",
+    "ReleaseDate": "Release Date",
+    "VoteAverage": "Vote Average",
+    "Overview": "Overview"
+  },
+  "NOW_PLAYING": "Now Playing",
+  "VIEW_DETAILS": "View Details"
+  }

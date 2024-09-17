@@ -1,0 +1,117 @@
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c1c1c; /* Dark background color */
+  color: #ffffff; /* White text color */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 15px 30px; /* Increased padding */
+  font-family: 'Arial', sans-serif; /* Font family */
+}
+
+/* Navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-size: 1.5rem; /* Larger font size */
+  font-weight: bold;
+}
+
+/* Navbar menu list styling */
+.navbar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar items */
+.navbar-item {
+  margin-left: 30px; /* Increase spacing between items */
+}
+
+/* Navbar link styling */
+.navbar-link {
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  font-size: 1rem; /* Font size */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.navbar-link:hover {
+  color: #f39c12; /* Highlight color on hover */
+}
+
+/* Search container styling */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 10px; /* Space between input and button */
+}
+
+.search-button {
+  padding: 8px 15px;
+  background-color: #f39c12; /* Button color */
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  background-color: #e67e22; /* Darker shade on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: none; /* Hide dropdown menu by default */
+  position: absolute;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+}
+
+/* Show dropdown menu when visible */
+.dropdown-menu .dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+}
+
+/* Language selector styling */
+.language-selector-container {
+  margin-left: 30px; /* Increase spacing to the left of the language selector */
+}
+
+/* Ensure the body content does not overlap with the fixed navbar */
+body {
+  margin-top: 80px; /* Adjust based on navbar height */
+}

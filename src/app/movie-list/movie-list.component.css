@@ -1,0 +1,164 @@
+/* src/app/movie-list/movie-list.component.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgba(0, 0, 0, 0.8); /* Fond noir avec opacité pour un effet de flou */
+    color: #fff; /* Texte blanc pour contraster avec le fond noir */
+    backdrop-filter: blur(8px); /* Effet de flou pour le fond */
+  }
+
+  .details-button {
+    background-color: #33339a; /* Color for the button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+  }
+
+  .details-button:hover {
+    background-color: black; /* Darker color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  .movie-list {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Largeur maximale pour le contenu */
+    margin: auto;
+    /* Centrer le contenu horizontalement */
+  }
+
+  .movie-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .movie-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #444;/* Bordure gris foncé */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Curseur pointeur pour indiquer que l'élément est cliquable */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition pour les effets de survol */
+  }
+
+  .movie-item:hover {
+    background-color: #333; /* Couleur de fond au survol */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Ombre portée au survol */
+
+  }
+
+  .movie-image {
+    width: 150px;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .movie-details {
+    padding: 15px;
+    flex: 1;
+
+  }
+
+  .movie-title {
+    font-size: 1.2em;
+    margin: 0;
+    color: #fff; /* Texte blanc pour le titre */
+  }
+
+  .movie-release-date {
+    font-size: 0.9em;
+    color: #aaa; /* Texte gris clair pour la date */
+    margin: 5px 0;
+  }
+
+  .movie-vote-average {
+    font-size: 0.9em;
+    color: #aaa; /* Texte gris très clair pour la note moyenne */
+  }
+  .recommend-button {
+    background-color: #5c5cc1; /* Couleur verte pour le bouton */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .recommend-button:hover {
+    background-color: black;/* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Effet de zoom au survol */
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .pagination button {
+    background-color: #33339a;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .pagination button:disabled {
+    background-color: #444; /* Couleur pour les boutons désactivés */
+    cursor: not-allowed;
+  }
+
+  .pagination span {
+    font-size: 1em;
+    line-height: 2;
+    font-style:normal;
+    color:black;
+  }
+  .language-selector-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+
+  .language-selector-container label {
+    margin-right: 10px;
+  }
+
+  .language-selector-container select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+  }
+  select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+
+  option {
+    padding: 8px;
+  }

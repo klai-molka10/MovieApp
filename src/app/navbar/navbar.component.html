@@ -1,0 +1,58 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="#" class="navbar-brand">
+      <p>{{ 'Movie Recommendation System' | translate }}</p>
+    </a>
+    <ul class="navbar-menu">
+      <!-- Check if user is authenticated -->
+      <ng-container *ngIf="isAuthenticated; else loginOptions">
+        <!-- Search box visible after login -->
+        <li class="navbar-item">
+          <div class="search-container">
+            <input type="text" placeholder="{{ 'Search movies...' | translate }}" [(ngModel)]="searchTerm" class="search-box">
+            <button (click)="searchMovies()" class="search-button">{{ 'Search' | translate }}</button>
+          </div>
+        </li>
+        <!-- Dropdown for Films -->
+        <li class="navbar-item" (click)="toggleDropdown()" class="navbar-link">
+          <ul *ngIf="isDropdownVisible" class="dropdown-menu">
+            <li class="dropdown-item" (click)="navigateTo('top-rated')">{{ 'Top Rated' | translate }}</li>
+            <li class="dropdown-item" (click)="navigateTo('popular')">{{ 'Popular' | translate }}</li>
+          </ul>
+        </li>
+        <!-- Logout option -->
+        <li class="navbar-item">
+          <a href="#" (click)="logout()" class="navbar-link">
+            <p>{{ 'Logout' | translate }}</p>
+          </a>
+        </li>
+      </ng-container>
+
+      <!-- Login/Signup before authentication -->
+      <ng-template #loginOptions>
+        <li class="navbar-item">
+          <a href="login" class="navbar-link">
+            <p>{{ 'Login' | translate }}</p>
+          </a>
+        </li>
+        <li class="navbar-item">
+          <a href="signup" class="navbar-link">
+            <p>{{ 'Sign Up' | translate }}</p>
+          </a>
+        </li>
+      </ng-template>
+
+      <!-- Language selector -->
+      <li class="navbar-item">
+        <div class="language-selector-container">
+          <select (change)="changeLanguage($event)">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+</nav>

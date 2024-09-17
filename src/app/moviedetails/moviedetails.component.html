@@ -1,0 +1,26 @@
+<div class="movie-details-container">
+  <div class="movie-poster">
+    <img [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : 'path/to/placeholder.jpg'" alt="{{ movie.title }}">
+    <button class="recommend-button"(click)=" goToRecommendation()">Recommend</button>
+  </div>
+  <div class="movie-info">
+    <h1>{{ movie.title }}</h1>
+    <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+    <p><strong>Overview:</strong> {{ movie.overview }}</p>
+    <p><strong>Vote average:</strong> {{ movie.vote_average}}</p>
+    <p><strong>Vote count:</strong> {{ movie.vote_count}}</p>
+    <p><strong>Popularity:</strong> {{ movie.popularity}}</p>
+    
+  </div>
+</div>
+
+<div class="cast-container">
+  <h2>Cast:</h2>
+  <div class="cast-list">
+    <div *ngFor="let actor of cast" class="cast-item">
+      <img *ngIf="actor.profile_path" [src]="'https://image.tmdb.org/t/p/w200' + actor.profile_path" alt="{{ actor.name }}">
+      <p>{{ actor.name }}</p>
+      <p><em>{{ actor.character }}</em></p>
+    </div>
+  </div>
+</div>

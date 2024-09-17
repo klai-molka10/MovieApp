@@ -1,0 +1,23 @@
+<div *ngIf="!isLoading && recommendedMovies.length > 0" class="recommended-movies-container">
+  <h2>Recommended Movies for You</h2>
+  <ul class="movies-list">
+    <li *ngFor="let movie of recommendedMovies" class="movie-item">
+      <img  [src]="'https://image.tmdb.org/t/p/w185/' + movie.poster_path" alt="{{ movie.title }}" 
+      class="movie-poster">
+      <h3>{{ movie.title }} ({{ movie.release_date }})</h3>
+
+      <!-- Safely handle genres array -->
+      <p>{{ (movie.genres || []).join(' | ') }}</p>
+
+      <!-- Star Rating -->
+      <div class="star-rating">
+        <i *ngFor="let star of [1, 2, 3, 4, 5]" 
+           [ngClass]="{'fas fa-star': star <= movie.userRating, 'far fa-star': star > movie.userRating}"
+           (click)="rateMovie(movie, star)"></i>
+      </div>
+
+      <!-- Rating Submission Button -->
+      <button class="rate-button" (click)="submitRating(movie)">Give Rating</button>
+    </li>
+  </ul>
+</div>
